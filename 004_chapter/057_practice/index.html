@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .container {
+            display: grid;
+            grid-template-columns: 300px auto minmax(200px, 300px);
+            grid-template-rows: repeat(3, 100px);
+            grid-auto-rows: 70px;
+            gap: 10px;
+        }
+
+
+        /* цвет шрифта: white; */
+        .item {
+            display: flex;
+            flex-wrap: wrap;
+            background-color: #465f68;
+            color: white;
+            justify-content: center;
+            align-content: center;
+        }
+
+        .expands {
+            width: auto;
+        }
+
+        .fixed {
+            width: 300px;
+        }
+
+        .flexible {
+            width: minmax(200px, 300px);
+        }
+    </style>
+    <title>Grid Layout</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="item">300px x 100px</div>
+        <div class="item">😎</div>
+        <div class="item">200px — 300px x 100px</div>
+        <div class="item">300px x 100px</div>
+        <div class="item">😎</div>
+        <div class="item">200px — 300px x 100px</div>
+        <div class="item">300px x 100px</div>
+        <div class="item">😎</div>
+        <div class="item">200px — 300px x 100px</div>
+        <div class="item">🤪 300px x 70px</div>
+    </div>
+</body>
+
+</html>
