@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Макет_1</title>
+    <style>
+        .grid_container {
+            display: grid;
+            grid-template-columns: 120px 1fr;
+            grid-template-rows: 15% 75% 10%;
+            background-color: yellowgreen;
+            height: 95vh;
+        }
+
+        .header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: aqua;
+            grid-area: 1/1/2/3;
+        }
+
+        .footer {
+            background-color: blanchedalmond;
+            grid-area: 3/1/4/3;
+        }
+
+        .box_container {
+            background-color: blueviolet;
+            column-gap: 5px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: 1fr;
+            padding: 5px;
+        }
+
+        .side_panel {
+            background-color: brown;
+        }
+
+        .box {
+            background-color: antiquewhite;
+        }
+
+        @media screen and (max-width: 782px) {
+            .box_container {
+                grid-template-columns: 1fr;
+                grid-template-rows: repeat(3, 1fr);
+                gap: 5px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="grid_container">
+        <div class="header">Header</Header>
+        </div>
+        <div class="side_panel">Side panel</div>
+        <div class="box_container">
+            <div class="box">Content_box_1</div>
+            <div class="box">Content_box_2</div>
+            <div class="box">Content_box_3</div>
+        </div>
+        <div class="footer">Footer</div>
+    </div>
+</body>
+
+</html>
